@@ -1,7 +1,19 @@
+import { UserAuth } from "../context/AuthContext";
+
 const Navbar = () => {
+  const { currentUser, logOut } = UserAuth();
+
+  const handleLogOut = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
-    <div>
-      <div className="flex justify-between items-center py-1 px-2 bg-gray-100 text-slate-800">
+    <div className="bg-blue-50 shadow-sm">
+      <div className="max-w-4xl flex justify-between items-center py-1 px-2 mx-auto text-slate-800">
         <button className="md:hidden p-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +64,11 @@ const Navbar = () => {
               />
             </svg>
           </button>
-          <button className="p-2">logout</button>
+          {currentUser && (
+            <button className="p-2 text-sm" onClick={() => handleLogOut()}>
+              logout
+            </button>
+          )}
         </div>
       </div>
     </div>
