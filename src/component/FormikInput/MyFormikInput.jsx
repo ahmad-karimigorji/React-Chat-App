@@ -9,12 +9,12 @@ const MyFormikInput = ({ ...inputProps }) => {
       {inputProps.type === "password" ? (
             <div className="relative flex items-center mb-1">
           <input
-            className="w-full p-2 pr-10 border rounded-md text-slate-800 focus:outline-blue-400 bg-transparent"
+            className="w-full p-2 pr-10 border rounded-md text-base-content placeholder:text-base-content/60 border-base-content/20 focus:outline-base-content/20 focus:outline-offset-2 focus:outline-2 focus:outline bg-transparent"
             {...inputProps}
             {...field}
             type={isShow ? "text" : "password"}
           />
-          <button type="button" className="absolute right-0 top-0 p-2 text-slate-800" onClick={() => setIsShow(!isShow)}>
+          <button type="button" className="absolute right-0 top-0 p-2 text-base-content" onClick={() => setIsShow(!isShow)}>
             {isShow ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -55,12 +55,12 @@ const MyFormikInput = ({ ...inputProps }) => {
         </div>
       ) : (
             <input
-          className="w-full p-2 border rounded-md mb-1 text-slate-800 focus:outline-blue-400 bg-transparent"
+          className="w-full p-2 border rounded-md mb-1 text-base-content placeholder:text-base-content/60 border-base-content/20 focus:outline-base-content/20 focus:outline-offset-2 focus:outline-2 focus:outline bg-transparent"
           {...inputProps}
           {...field}
         />
       )}
-        {meta.touched && meta.error ? <p className="text-xs text-red-300 pl-2">{meta.error}</p> : ""}
+        {meta.touched && meta.error ? <p className="text-xs text-error pl-2">{meta.error}</p> : ""}
 
     </div>
   );

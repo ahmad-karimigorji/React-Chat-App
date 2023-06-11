@@ -125,16 +125,16 @@ const Signup = () => {
 
               <button
                 type="submit"
-                className={`w-full bg-blue-400 text-white rounded-md p-2 mt-2 mb-1 ${
-                  isValid ? "" : "bg-gray-300"
+                className={`w-full rounded-md p-2 mt-2 mb-1 ${
+                  isValid ? "bg-primary text-primary-content" : "bg-neutral text-neutral-content"
                 }`}
                 disabled={!isValid}
               >
                 Sign up
               </button>
-              <p className="text-slate-800 text-sm text-center">
+              <p className="text-base-content text-sm text-center">
                 Have an account?{" "}
-                <Link to="/" className="text-blue-400 p-1">
+                <Link to="/" className="text-primary p-1">
                   Login
                 </Link>{" "}
               </p>

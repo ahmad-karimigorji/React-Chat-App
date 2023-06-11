@@ -42,34 +42,33 @@ const SendMessageBox = () => {
   };
 
   return (
-    <div className="border-t border-t-gray-100 px-4 w-full">
-      <form
-        onSubmit={handleForm}
-        className="max-w-4xl mx-auto w-full flex items-end py-3"
-      >
-        <textarea
-          value={value}
-          name=""
-          id=""
-          rows={textareaheight}
-          onChange={handleChange}
-          placeholder="type a message"
-          className="resize-none flex-auto p-2 bg-blue-50 rounded-sm text-gray-500 focus:outline-none"
-        ></textarea>
-        <button
-          type="submit"
-          className="bg-blue-50 rounded-sm text-blue-400 ml-2 p-2"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="w-6 h-6"
+    <div className="max-w-3xl mx-auto w-full fixed bottom-0">
+      <div className="px-4 bg-base-100">
+        <form onSubmit={handleForm} className="w-full flex items-end py-3">
+          <textarea
+            value={value}
+            name=""
+            id=""
+            rows={textareaheight}
+            onChange={handleChange}
+            placeholder="type a message"
+            className="resize-none flex-auto p-2 bg-base-200 rounded-sm text-gray-500 focus:outline-none placeholder:text-sm placeholder:text-base-content/60"
+          ></textarea>
+          <button
+            type="submit"
+            className="bg-base-200 rounded-sm text-primary ml-2 p-2"
           >
-            <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
-          </svg>
-        </button>
-      </form>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-6 h-6"
+            >
+              <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
+            </svg>
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

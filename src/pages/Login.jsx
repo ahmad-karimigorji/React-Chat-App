@@ -47,7 +47,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <div className="px-5 max-w-sm mx-auto mt-20">
         <Formik
           initialValues={initialValues}
@@ -67,29 +67,28 @@ const Login = () => {
 
               <button
                 type="submit"
-                className={`w-full bg-blue-400 text-white rounded-md p-2 mt-2 mb-1 ${
-                  isValid ? "" : "bg-gray-300"
+                className={`w-full rounded-md p-2 mt-2 mb-1 ${
+                  isValid ? "bg-primary text-primary-content" : "bg-neutral text-neutral-content"
                 }`}
                 disabled={!isValid}
               >
                 Login
               </button>
-              <p className="text-slate-800 text-sm text-center">
+              <p className="text-base-content text-sm text-center">
                 Not a member?{" "}
-                <Link to="/signup" className="text-blue-400 p-1">
+                <Link to="/signup" className="text-primary p-1">
                   Singup
                 </Link>{" "}
               </p>
             </Form>
           )}
         </Formik>
-        <div className="w-8 h-8 text-xs font-bold flex items-center justify-center border rounded-full mx-auto text-slate-800 my-7">
+        <div className="w-8 h-8 text-xs font-bold flex items-center justify-center border border-base-content rounded-full mx-auto text-base-content my-7">
           OR
         </div>
 
         <button
-        // type="button"
-          className=" w-full flex items-center bg-blue-400 text-white rounded-md p-0.5"
+          className=" w-full flex items-center bg-primary text-primary-content rounded-md p-0.5"
           onClick={handleLogin}
         >
           <span className="bg-white rounded-l-md p-0.5">
